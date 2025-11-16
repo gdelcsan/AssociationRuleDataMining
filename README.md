@@ -117,7 +117,8 @@ project-root/
 │   └── main.py
 ├── LICENSE
 ├── README.md
-└── requirements.txt
+├── requirements.txt
+└── REPORT.pdf
 ```
 
 #### Data Preprocessing
