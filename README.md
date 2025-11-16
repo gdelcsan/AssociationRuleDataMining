@@ -120,6 +120,7 @@ project-root/
 ├── REPORT.pdf
 └── requirements.txt
 ```
+(this is also in the report, however the report file wasn't included since I hadn't added it yet)
 
 #### Data Preprocessing
 
