@@ -101,8 +101,8 @@ Tested on provided dataset (80-100 transactions after cleaning):
 
 ```
 project-root/
-├── devcontainer/
-│   └── json
+├── .devcontainer/
+│   └── devcontainer.json
 ├── data/
 │   ├── products.csv
 │   └── sample_transactions.csv
