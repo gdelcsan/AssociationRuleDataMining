@@ -7,7 +7,10 @@
 - **Course**: CAI 4002 - Artificial Intelligence
 - **Semester**: Fall 2025
 
-
+#### Direct Link
+```
+https://supermarketsimulation.streamlit.app/
+```
 
 #### System Overview
 
