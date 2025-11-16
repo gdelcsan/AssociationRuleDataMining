@@ -11,8 +11,7 @@
 
 #### System Overview
 
-This application lets users upload or create their own supermarket transaction data and automatically analyzes it using association rule
-mining. It helps identify which products are commonly bought together, generates useful recommendations, and displays the results clearly.
+This application lets users upload or create their own supermarket transaction data and automatically analyzes it using association rule mining. It helps identify which products are commonly bought together, generates useful recommendations, and displays the results clearly.
 
 #### Technical Stack
 
@@ -75,15 +74,10 @@ item candidates.
 that didn’t meet the minimum support. This helped reduce unnecessary calculations.
 
 ##### Eclat
-For the Eclat algorithm, I took a different approach by using a vertical data format instead of scanning full transactions each time. I
-converted the dataset into item transaction ID sets, which let me compute support using simple set intersections. This made it faster to
-explore combinations of items compared to Apriori.
-- Data structure: I kept the data in a dictionary where each key is a frozenset([item]) and each value contains all the transaction IDs that
-include that item.
-- Search strategy: I followed a depth-first search approach. The algorithm drills down into one itemset at a time, expanding it as far as
-possible before backtracking.
-- Intersection method: I used Python’s set operations to intersect TID sets. This allows me to quickly check how many transactions two itemsets
-share and whether they meet minimum support.
+For the Eclat algorithm, I took a different approach by using a vertical data format instead of scanning full transactions each time. I converted the dataset into item transaction ID sets, which let me compute support using simple set intersections. This made it faster to explore combinations of items compared to Apriori.
+- Data structure: I kept the data in a dictionary where each key is a frozenset([item]) and each value contains all the transaction IDs that include that item.
+- Search strategy: I followed a depth-first search approach. The algorithm drills down into one itemset at a time, expanding it as far as possible before backtracking.
+- Intersection method: I used Python’s set operations to intersect TID sets. This allows me to quickly check how many transactions two itemsets share and whether they meet minimum support.
 
 
 #### Performance Results
@@ -97,8 +91,8 @@ Tested on provided dataset (80-100 transactions after cleaning):
 
 **Parameters**: min_support = 0.2, min_confidence = 0.5
 
-**Analysis**: Overall, Eclat performed faster than Apriori because it uses set intersections instead of repeatedly scanning the entire dataset.
-Apriori took longer since it generates more candidate itemsets and relies on multiple passes over the transactions.
+**Analysis**: In my tests, Apriori surprisingly ran faster than Eclat. Since the dataset wasn’t very large, Apriori’s repeated scans didn’t slow it down much, while Eclat’s vertical data format and set-intersection steps seemed to add extra overhead. So, for this project’s data size, Apriori ended up being the quicker option.
+
 
 #### Project Structure
 
@@ -116,11 +110,10 @@ project-root/
 │   ├── ui/
 │   │   └── app.py 
 │   └── main.py
+├── LICENSE
 ├── README.md
 └── requirements.txt
 ```
-
-
 
 #### Data Preprocessing
 
