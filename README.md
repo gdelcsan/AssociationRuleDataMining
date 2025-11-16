@@ -92,8 +92,8 @@ Tested on provided dataset (80-100 transactions after cleaning):
 
 | Algorithm | Runtime (ms) | Rules Generated |
 |-----------|--------------|-----------------|
-| Apriori   | 0.2 ms       | 11              |
-| Eclat     | 0.3 ms       | 11              |
+| Apriori   | 0.1 ms       | 11              |
+| Eclat     | 0.2 ms       | 11              |
 
 **Parameters**: min_support = 0.2, min_confidence = 0.5
 
