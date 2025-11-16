@@ -19,8 +19,8 @@ This application lets users upload or create their own supermarket transaction d
 #### Technical Stack
 
 - **Language**: Python 3.13
-- **Key Libraries**: [List main dependencies]
-- **UI Framework**: [If applicable]
+- **Key Libraries**: Streamlit, Pandas, NumPy, itertools, Pathlib
+- **UI Framework**: I used Streamlit, a Python based web framework that makes it easy to build interactive dashboards and data applications.
 
 #### Installation
 
