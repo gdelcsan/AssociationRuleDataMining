@@ -105,8 +105,8 @@ Apriori took longer since it generates more candidate itemsets and relies on mul
 ```
 project-root/
 ├── data/
-│   ├── sample_transactions.csv
-│   └── products.csv
+│   ├── products.csv
+│   └── sample_transactions.csv
 ├── src/
 │   ├── algorithms/
 │   │   ├── apriori.py
@@ -117,7 +117,6 @@ project-root/
 │   │   └── app.py 
 │   └── main.py
 ├── README.md
-├── REPORT.pdf
 └── requirements.txt
 ```
 
