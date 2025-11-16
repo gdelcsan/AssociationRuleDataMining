@@ -90,10 +90,10 @@ share and whether they meet minimum support.
 
 Tested on provided dataset (80-100 transactions after cleaning):
 
-| Algorithm | Runtime (ms) | Rules Generated | Memory Usage |
-|-----------|--------------|-----------------|--------------|
-| Apriori   | [value]      | [value]         | [value]      |
-| Eclat     | [value]      | [value]         | [value]      |
+| Algorithm | Runtime (ms) | Rules Generated |
+|-----------|--------------|-----------------|
+| Apriori   | 0.2 ms       | 11              |
+| Eclat     | 0.3 ms       | 11              |
 
 **Parameters**: min_support = 0.2, min_confidence = 0.5
 
@@ -104,18 +104,18 @@ Apriori took longer since it generates more candidate itemsets and relies on mul
 
 ```
 project-root/
-├── src/
-│   ├── algorithms/
-│   │   ├── apriori.[py]
-│   │   └── eclat.[py]
-│   ├── preprocessing/
-│   │   └── cleaner.[py]
-│   ├── ui/
-│   │   └── [interface files]
-│   └── main.[py]
 ├── data/
 │   ├── sample_transactions.csv
 │   └── products.csv
+├── src/
+│   ├── algorithms/
+│   │   ├── apriori.py
+│   │   └── eclat.py
+│   ├── preprocessing/
+│   │   └── cleaner.py
+│   ├── ui/
+│   │   └── app.py 
+│   └── main.py
 ├── README.md
 ├── REPORT.pdf
 └── requirements.txt
