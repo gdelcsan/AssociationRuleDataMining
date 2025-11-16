@@ -32,15 +32,15 @@ This application lets users upload or create their own supermarket transaction d
 
 # Clone or extract project
 ```
-(https://github.com/gdelcsan/dataMining.git)
+https://github.com/gdelcsan/AssociationRuleDataMining.git
 ```
 # Install dependencies
 ```
-pip install streamlit pandas numpy
+pip install -r requirements.txt
 ```
 # Run application
 ```
-streamlit run streamlit_app.py
+streamlit run src/main.py
 ```
 
 #### Usage
